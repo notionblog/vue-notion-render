@@ -28,7 +28,9 @@ const _generateBlock = (item) => {
       width: item.format.block_width,
       height: item.format.block_height
         ? item.format.block_height
-        : item.format.block_width / 2,
+        : item.format.block_width
+        ? item.format.block_width / 2
+        : 300,
     };
   } else if (item.type == "video") {
     block = {

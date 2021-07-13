@@ -24,7 +24,3 @@ export default {
   },
 };
 </script>
-
-<style>
-@import "../../node_modules/katex/dist/katex.min.css";
-</style>

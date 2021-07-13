@@ -43,12 +43,11 @@
         **************    
     -->
     <!-- image -->
+
     <img
       v-if="block.type == 'u_image'"
       :src="block.src"
-      :width="block.width"
-      :height="block.height"
-      style="object-fit:fill;max-width:100%; margin:auto; display:block;"
+      style="object-fit:fill;max-width:100%; margin:auto; display:block; max-height:800px; margin-bottom:15px"
     />
 
     <!-- video Or embed -->

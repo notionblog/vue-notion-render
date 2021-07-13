@@ -19,7 +19,7 @@ export default Vue.extend({
   },
   async created() {
     fetch(
-      "https://beta.notiontoblog.workers.dev/v1/page/f36a63918d1246909206813dcec928ea"
+      "https://beta.notiontoblog.workers.dev/v1/page/aaa73702fdba430aaeba8d7044c4cda8"
     )
       .then(async (data) => {
         this.data = await data.json();
