@@ -96,6 +96,8 @@
     <Tweet v-if="block.type == 'u_tweet'" :src="block.src" />
     <!-- File -->
     <File v-if="block.type == 'u_file'" :data="block.data" />
+    <!-- Audio -->
+    <Audio v-if="block.type == 'u_audio'" :data="block.data" />
   </div>
 </template>
 
@@ -107,6 +109,7 @@ import Bookmark from "./blocks/Bookmark.vue";
 import Code from "./blocks/Code.vue";
 import Tweet from "./blocks/Tweet.vue";
 import File from "./blocks/File.vue";
+import Audio from "./blocks/Audio.vue";
 export default {
   components: {
     Txt,
@@ -116,6 +119,7 @@ export default {
     Code,
     Tweet,
     File,
+    Audio,
   },
   props: {
     block: Object,
