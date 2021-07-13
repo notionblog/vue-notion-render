@@ -94,6 +94,8 @@
     />
     <!-- Tweet -->
     <Tweet v-if="block.type == 'u_tweet'" :src="block.src" />
+    <!-- File -->
+    <File v-if="block.type == 'u_file'" :data="block.data" />
   </div>
 </template>
 
@@ -104,6 +106,7 @@ import Callout from "./blocks/Callout.vue";
 import Bookmark from "./blocks/Bookmark.vue";
 import Code from "./blocks/Code.vue";
 import Tweet from "./blocks/Tweet.vue";
+import File from "./blocks/File.vue";
 export default {
   components: {
     Txt,
@@ -112,6 +115,7 @@ export default {
     Bookmark,
     Code,
     Tweet,
+    File,
   },
   props: {
     block: Object,
