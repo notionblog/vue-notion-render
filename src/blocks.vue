@@ -98,6 +98,8 @@
     <File v-if="block.type == 'u_file'" :data="block.data" />
     <!-- Audio -->
     <Audio v-if="block.type == 'u_audio'" :data="block.data" />
+    <!-- Equation -->
+    <Math v-if="block.type == 'u_equation'" :data="block.data" />
   </div>
 </template>
 
@@ -110,6 +112,7 @@ import Code from "./blocks/Code.vue";
 import Tweet from "./blocks/Tweet.vue";
 import File from "./blocks/File.vue";
 import Audio from "./blocks/Audio.vue";
+import Math from "./blocks/Math.vue";
 export default {
   components: {
     Txt,
@@ -120,6 +123,7 @@ export default {
     Tweet,
     File,
     Audio,
+    Math,
   },
   props: {
     block: Object,
