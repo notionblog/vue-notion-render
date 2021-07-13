@@ -42,5 +42,6 @@
   },
   "engines": {
     "node": ">=12"
-  }
+  },
+  "repository": "https://github.com/notionblog/vue-notion-render"
 }
