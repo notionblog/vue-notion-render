@@ -61,6 +61,9 @@
     >
     </iframe>
 
+    <!-- Drive -->
+    <Drive v-if="block.type == 'u_drive'" :data="block.data" />
+
     <!-- Quote -->
     <Quote v-if="block.type == 'u_quote'" :data="block.u_quote.text" />
 
@@ -112,6 +115,7 @@ import Tweet from "./blocks/Tweet.vue";
 import File from "./blocks/File.vue";
 import Audio from "./blocks/Audio.vue";
 import Math from "./blocks/Math.vue";
+import Drive from "./blocks/Drive.vue";
 export default {
   components: {
     Txt,
@@ -123,6 +127,7 @@ export default {
     File,
     Audio,
     Math,
+    Drive,
   },
   props: {
     block: Object,

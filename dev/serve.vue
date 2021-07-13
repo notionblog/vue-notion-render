@@ -19,7 +19,7 @@ export default Vue.extend({
   },
   async created() {
     fetch(
-      "https://beta.notiontoblog.workers.dev/v1/page/aaa73702fdba430aaeba8d7044c4cda8"
+      "https://beta.notiontoblog.workers.dev/v1/page/28eac3eed25a47b2bcbb6bb957537f16"
     )
       .then(async (data) => {
         this.data = await data.json();
@@ -39,7 +39,7 @@ export default Vue.extend({
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
-body {
+#app {
   font-family: "Nunito", sans-serif;
 }
 .container {
