@@ -19,7 +19,6 @@ export default {
         throwOnError: false,
       });
       this.equation = rendered;
-      console.log(rendered);
     } catch (err) {}
   },
 };

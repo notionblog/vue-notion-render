@@ -72,7 +72,7 @@ export default {
               ids.push(...row.content);
               columnRows.push(rowData);
             });
-            console.log("checki ", columnRows);
+
             this.columnList[block.id] = columnRows;
           }
         });

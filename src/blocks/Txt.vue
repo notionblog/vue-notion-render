@@ -55,7 +55,6 @@ export default {
       return colors[color];
     },
     getBgColor(color) {
-      console.log(color);
       const colors = {
         red: "#fbe4e4",
         gray: "#ebeced",
