@@ -47,7 +47,7 @@ in order to use it with Nuxt.js create a Nuxt plugin.
 
 ### Local Component
 
-if you don't want to register the component globally you can use it locally in you component.
+if you don't want to register the component globally you can use it locally in your component.
 
 ```
     <script>
@@ -156,4 +156,4 @@ export default {
 
 # Credits
 
-Create By [@yudax](https://twitter.com/_yudax)
+Created By [@yudax](https://twitter.com/_yudax)
