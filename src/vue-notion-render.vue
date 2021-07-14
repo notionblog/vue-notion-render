@@ -1,7 +1,7 @@
 <template>
   <section>
     <div
-      style="margin-bottom:10px"
+      style="margin-bottom:30px"
       v-for="(block, i) in blocks"
       :key="block.id"
       :id="block.id"

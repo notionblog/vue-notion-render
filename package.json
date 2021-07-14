@@ -1,6 +1,6 @@
 {
   "name": "vue-notion-render",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "",
   "main": "dist/vue-notion-render.ssr.js",
   "browser": "dist/vue-notion-render.esm.js",
