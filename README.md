@@ -1,8 +1,12 @@
 # vue-notion-render
+### 📜 Notion Renderer for Notion pages.
 
 ![vue-notion-render](thumbnail.png)
 
-### 📜 Notion Renderer for Notion pages.
+[NPM](https://www.npmjs.com/package/vue-notion-render)
+
+![Npm](https://img.shields.io/npm/dm/vue-notion-render.svg)
+
 
 # Features
 
