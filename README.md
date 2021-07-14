@@ -25,7 +25,7 @@ npm install vue-notion-render --save
 
 in `src/index.js` file import the component and use Vue.component method.
 
-```
+```js
     import Vue from "vue"
     import VueNotionRender from "vue-notion-render"
     Vue.component('VueNotionRender', VueNotionRender)
@@ -37,7 +37,7 @@ in order to use it with Nuxt.js create a Nuxt plugin.
 
 1. in `/plugins` directory create a file `vue-notion-render.js`
 
-   ```
+   ```js
    import VueNotionRender from 'vue-notion-render'
    import Vue from 'vue'
    Vue.component('VueNotionRender', VueNotionRender)
@@ -45,7 +45,7 @@ in order to use it with Nuxt.js create a Nuxt plugin.
 
 2. Register the plugin by adding the file in `nuxt.config.js` plugins array
 
-   ```
+   ```js
        plugins: ['~/plugins/vue-notion-render.js']
    ```
 
@@ -53,7 +53,7 @@ in order to use it with Nuxt.js create a Nuxt plugin.
 
 if you don't want to register the component globally you can use it locally in your component.
 
-```
+```js
     <script>
          import VueNotionRender from "vue-notion-render"
          ...
@@ -82,7 +82,7 @@ Currently the Official API doesn't support all Notion blocks, a temporary soluti
 </template>
 
 <script>
-...
+...js
 export default {
     ...
     data() {
