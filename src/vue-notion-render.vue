@@ -1,6 +1,25 @@
 <template>
   <section>
-    <div v-for="block in blocks" :key="block.id" :id="block.id">
+    {{ blocks }}
+    <div
+      style="margin-bottom:15px"
+      v-for="(block, i) in blocks"
+      :key="block.id"
+      :id="block.id"
+    >
+      <ol
+        style="margin:0;padding:0"
+        v-if="
+          block.type == 'numbered_list_item' && block.numbered_list_item.text
+        "
+      >
+        <span v-if="blocks[--i].type != 'numbered_list_item'"
+          >{{ (listCount = 1) }}.
+        </span>
+        <span v-else> {{ ++listCount }}. </span>
+
+        <Txt :p="block.numbered_list_item.text" />
+      </ol>
       <!-- Column List -->
       <div
         style="display:flex;align-items:flex-start;flex:wrap;gap:25px"
@@ -25,10 +44,12 @@
 <script>
 import { format } from "./utils/u_format";
 import blocks from "./blocks.vue";
+import Txt from "./blocks/Txt.vue";
 export default {
   name: "render",
   components: {
     blocks,
+    Txt,
   },
   props: {
     unofficial: Boolean,
@@ -49,6 +70,7 @@ export default {
     getBlocks() {
       if (this.unofficial === true) {
         let blocks = format(this.data);
+        console.log("ff", blocks);
         let ids = [];
         blocks.map((block) => {
           if (block.type == "u_toggle") {
