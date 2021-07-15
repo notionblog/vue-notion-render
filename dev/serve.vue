@@ -1,4 +1,6 @@
 <script>
+import "prismjs/themes/prism.css";
+import "katex/dist/katex.css";
 import Vue from "vue";
 import VueNotionRender from "@/vue-notion-render.vue";
 

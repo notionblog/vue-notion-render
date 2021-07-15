@@ -19,7 +19,8 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "dependencies": {
-    "katex": "^0.13.11"
+    "katex": "^0.13.11",
+    "prismjs": "^1.24.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

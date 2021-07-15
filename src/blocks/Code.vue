@@ -2,6 +2,7 @@
   <pre><code :class="csslanguage">{{code}}</code></pre>
 </template>
 <script>
+import Prism from "prismjs";
 export default {
   props: {
     code: String,
@@ -12,7 +13,9 @@ export default {
       return `language-${this.language.toLowerCase()}`;
     },
   },
-  mounted() {},
+  mounted() {
+    Prism.highlightAll();
+  },
 };
 </script>
 
