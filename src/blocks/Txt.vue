@@ -26,6 +26,7 @@
       <a
         v-if="item.href"
         :href="item.href"
+        rel="noopener noreferrer"
         target="_blank"
         class="text-blue-600 underline"
         >{{ item.plain_text }}</a
