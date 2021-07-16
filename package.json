@@ -46,5 +46,6 @@
   "engines": {
     "node": ">=12"
   },
+  "license": "MIT",
   "repository": "https://github.com/notionblog/vue-notion-render"
 }

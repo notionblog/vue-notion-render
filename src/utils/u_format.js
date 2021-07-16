@@ -25,20 +25,20 @@ const _generateBlock = (item) => {
       id: item.id,
       type: "u_image",
       src: _imgLink(item.properties.source[0][0], item.id),
-      width: item.format.block_width,
-      height: item.format.block_height
-        ? item.format.block_height
-        : item.format.block_width
-        ? item.format.block_width / 2
+      width: item.format?.block_width,
+      height: item.format?.block_height
+        ? item?.format?.block_height
+        : item?.format?.block_width
+        ? item?.format?.block_width / 2
         : 300,
     };
   } else if (item.type == "video") {
     block = {
       id: item.id,
       type: "u_video",
-      src: item.format.display_source,
-      width: item.format.block_width,
-      height: item.format.block_height ? item.format.block_height : 400,
+      src: item.format?.display_source,
+      width: item.format?.block_width,
+      height: item.format?.block_height ? item.format?.block_height : 400,
     };
   } else if (_isEmbed(item.type)) {
     block = {
