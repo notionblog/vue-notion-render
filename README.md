@@ -1,5 +1,5 @@
 # vue-notion-render
-### 📜 Notion Renderer for Notion pages.
+### 📜 Vue Renderer for Notion pages.
 
 ![vue-notion-render](thumbnail.png)
 
