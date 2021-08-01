@@ -83,9 +83,11 @@ export default {
   },
   methods: {
     checkCustom(block) {
-      for (let i = 0; i < this.custom.length; i++) {
-        if (this.custom[i].blockId == block.id) {
-          return this.custom[i];
+      if (this.custom && this.custom.length) {
+        for (let i = 0; i < this.custom.length; i++) {
+          if (this.custom[i].blockId == block.id) {
+            return this.custom[i];
+          }
         }
       }
       return null;
