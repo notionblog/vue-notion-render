@@ -158,6 +158,85 @@ export default {
 | Table           | ❌        | ❌                | ❌           | soon                                                                                     |
 | Board           | ❌        | ❌                | ❌           | soon                                                                                     |
 
+## Custom Blocks
+
+vue-notion-render let you use customized components to render some blocks, to do that 
+
+### 1. Register Components globally
+
+Vue.js  in `main.js` file register the components
+
+```jsx
+import Vue from "vue";
+import Component1 from "../components/component1.vue";
+import Component2 from "../components/component2.vue";
+
+Vue.component("Component1", Component1);
+Vue.component("Component2", Component2);
+```
+
+Nuxt.js
+
+1.create a plugin in `/plugins` directory and name it `components.js`
+
+```jsx
+import Vue from "vue";
+import Component1 from "../components/component1.vue";
+import Component2 from "../components/component2.vue";
+
+Vue.component("Component1", Component1);
+Vue.component("Component2", Component2);
+```
+
+2- Register the plugin by adding the file in `nuxt.config.js` plugins array
+
+```jsx
+plugins: ['~/plugins/components.js']
+```
+
+### 2. Create Customized block array
+
+You need to create an array of objects that contains `blockId` and `componentName` like this
+
+```jsx
+data() {
+    return {
+      customBlocks: [
+        {
+          blockId: "fe30b1ce-84a7-47b3-abe1-b3448b989115",
+          componentName: "Component1"
+        },
+        {
+          blockId: "305fed49-f7e8-412f-80a1-b32e2bbd5a01",
+          componentName: "Component2"
+        }
+      ]
+    };
+  },
+```
+
+### 3. Pass the array to `custom` prop
+
+You need to pass the customized block array to `custom` prop
+
+```jsx
+<VueNotionRender :unofficial="true" :data="blocks" :custom="customBlocks" />
+```
+
+### 4. Accept `block` prop in your component
+
+to have the block data you need to accept `block` prop in your component
+
+```jsx
+<script>
+export default {
+  props: {
+    block: Object,
+  },
+};
+</script>
+```
+
 # Credits
 
 Created By [@yudax](https://twitter.com/_yudax)
