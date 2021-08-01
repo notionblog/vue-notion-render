@@ -26,6 +26,7 @@
           <blocks
             v-for="t_block in toggleBlocks[block.id]"
             :key="t_block.id"
+            :isCustom="checkCustom(t_block)"
             :block="t_block"
           />
         </Toggle>
@@ -43,11 +44,12 @@
           <blocks
             v-for="r_block in row.blocks"
             :key="r_block.id"
+            :isCustom="checkCustom(r_block)"
             :block="r_block"
           />
         </div>
       </div>
-      <blocks v-else :block="block" />
+      <blocks v-else :isCustom="checkCustom(block)" :block="block" />
     </div>
   </section>
 </template>
@@ -66,6 +68,7 @@ export default {
   props: {
     unofficial: Boolean,
     data: [Array, Object],
+    custom: [Array],
   },
   data() {
     return {
@@ -79,6 +82,15 @@ export default {
     },
   },
   methods: {
+    checkCustom(block) {
+      for (let i = 0; i < this.custom.length; i++) {
+        if (this.custom[i].blockId == block.id) {
+          return this.custom[i];
+        }
+      }
+      return null;
+    },
+
     getBlocks() {
       if (this.unofficial === true) {
         let blocks = format(this.data);
@@ -111,6 +123,7 @@ export default {
         });
         return blocks.filter((block) => !ids.includes(block.id));
       }
+
       return this.data;
     },
   },

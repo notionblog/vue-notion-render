@@ -3,7 +3,6 @@ import "prismjs/themes/prism.css";
 import "katex/dist/katex.css";
 import Vue from "vue";
 import VueNotionRender from "@/vue-notion-render.vue";
-
 export default Vue.extend({
   name: "ServeDev",
   components: {
@@ -11,6 +10,16 @@ export default Vue.extend({
   },
   data() {
     return {
+      customBlocks: [
+        {
+          blockId: "fe30b1ce-84a7-47b3-abe1-b3448b989115",
+          componentName: "Component1",
+        },
+        {
+          blockId: "305fed49-f7e8-412f-80a1-b32e2bbd5a01",
+          componentName: "Component2",
+        },
+      ],
       data: {},
     };
   },
@@ -35,7 +44,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <vue-notion-render :unofficial="true" :data="data" />
+    <vue-notion-render :unofficial="true" :data="data" :custom="customBlocks" />
   </div>
 </template>
 
