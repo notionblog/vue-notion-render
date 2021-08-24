@@ -1,14 +1,14 @@
 <template>
   <section>
     <div
-      style="margin-bottom:30px"
+      style="padding: 3px 2px"
       v-for="(block, i) in blocks"
       :key="block.id"
       :id="block.id"
     >
       <!-- Ordered List -->
       <ol
-        style="margin:0;padding:0"
+        style="margin: 0; padding: 0"
         v-if="
           block.type == 'numbered_list_item' && block.numbered_list_item.text
         "
@@ -33,7 +33,7 @@
       </div>
       <!-- Column List -->
       <div
-        style="display:flex;align-items:flex-start;flex:wrap;gap:25px"
+        style="display: flex; align-items: flex-start; flex: wrap; gap: 25px"
         v-if="block.type == 'u_column_list'"
       >
         <div
